@@ -1,0 +1,31 @@
+.about-me {
+  position: relative;
+  @include flex(center, center, column, nowrap);
+  height: calc(100vh-263px);
+  @include media-d-m($screen-desktop) {
+    height: calc(100vh-170px);
+  }
+  @include media-d-m($screen-tablet-small){
+    height: 100%;
+    margin-bottom: 50px;
+  }
+  &__content {
+    @include flex(center, center, row, nowrap);
+    @include media-d-m($screen-tablet-large) {
+      @include flex(center, center, column, nowrap);
+      text-align: center;
+    }
+  }
+  &__img {
+    width: 100%;
+    max-width: 274px;
+    margin-right: 70px;
+    @include media-d-m($screen-tablet-large) {
+      margin-right: 0;
+    }
+  }
+  &__text {
+    @include text($h20, 700, $indigo-dye, $f-rubik);
+    line-height: 40px;
+  }
+}

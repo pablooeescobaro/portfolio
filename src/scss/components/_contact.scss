@@ -1,0 +1,35 @@
+.contact {
+  position: relative;
+  @include flex(center, center, column, nowrap);
+  height: 100vh;
+  padding: 50px 0;
+  @include media-d-m($screen-tablet-small) {
+    height: 100%;
+  }
+  &__item {
+    @include text($h20, 700, $indigo-dye, $f-rubik);
+    &:not(:last-of-type){
+      margin-bottom: 5px;
+    }
+    @include media-d-m($screen-netbook){
+      @include flex(center, center, column, nowrap);
+    }
+  }
+  &__link {
+    @include flex(flex-start, center, row, nowrap);
+    @include text($h20, 700, $indigo-dye, $f-rubik);
+    margin-left: 10px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    @include media-d-m($screen-netbook){
+      display: none;
+    }
+    &:hover {
+      transform: translateX(5px);
+      @include media-d-m($screen-tablet-small) {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

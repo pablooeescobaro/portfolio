@@ -1,0 +1,14 @@
+.lang{
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition-property: border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    &.active{
+        border-color: $cadet-gray;
+    }
+    &:hover{
+      border-bottom: 3px solid $indigo-dye;
+    }
+    
+}

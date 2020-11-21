@@ -1,0 +1,39 @@
+.next{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 25px;
+    @include flex(center,center, column, nowrap);
+    cursor: pointer;
+    @include media-d-m($screen-tablet-small){
+      display: none;
+    }
+    &__text{
+        @include text($h18, 400, $indigo-dye, $f-rubik);
+        &--white{
+          color: $mint-crema;
+        }
+    }
+    &__arrow{
+        @include text($h18, 400, $indigo-dye, $f-rubik);
+        &--white{
+          color: $mint-crema;
+        }
+    }
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-timing-function: ease;
+    animation-name: bounce-1;
+    @keyframes bounce-1 {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+}

@@ -1,0 +1,19 @@
+.banner{
+    @include size(100%, 44px);
+    @include text($h24, 700, $indigo-dye, $f-rubik);
+    text-transform: uppercase;
+    background-color: $mint-crema;
+    max-width: 300px;
+    position: absolute;
+    right: calc(50%-150px);
+    top: -22px;
+    text-align: center;
+    &--indigo{
+        background-color: $indigo-dye;
+        color: $mint-crema;
+    }
+    @include media-d-m($screen-tablet-small){
+        max-width: 230px;
+        right: calc(50%-115px);
+      }
+}

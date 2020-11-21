@@ -1,0 +1,24 @@
+//color
+
+$indigo-dye: #134074;
+$mint-crema: #eef4ed;
+$oxford-blue: #0b2545;
+$cadet-gray: #8da9c4;
+
+//font
+
+$f-rubik:  'Rubik', sans-serif;
+
+//font-size
+
+$base-font-size: 16px;
+@function calcRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}
+
+$h36: calcRem(36px);
+$h24: calcRem(24px);
+$h20: calcRem(20px);
+$h18: calcRem(18px);
+// $h90: calcRem(90px);

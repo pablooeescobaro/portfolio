@@ -1,0 +1,4 @@
+.inner{
+    @include max-width();
+    padding: 0 3%;
+}

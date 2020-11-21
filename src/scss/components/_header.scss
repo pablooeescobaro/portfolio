@@ -1,0 +1,42 @@
+.header {
+  &__menu{
+    @include flex(space-between, center, row, nowrap);
+    padding: 50px 0;
+    margin-bottom: 120px;
+    @include media-d-m($screen-desktop){
+      @include flex(center, center, row, nowrap);
+      margin-bottom: 60px;
+      padding: 0 0 25px 0
+    }
+    @include media-d-m($screen-tablet-small){
+      margin-bottom: 25px;
+    }
+  }
+  &__lang{
+    @include flex(center, center, row, nowrap);
+    @include text($h24, 700, $oxford-blue, $f-rubik);
+    align-self: flex-end;
+    @include media-d-m($screen-desktop){
+      display: none;
+    }
+  }
+  &__text{
+    @include text($h36, 700, $oxford-blue, $f-rubik);
+    @include media-d-m($screen-tablet-small){
+      @include text($h24, 700, $oxford-blue, $f-rubik);
+    }
+  }
+  &__perk{
+    @include media-d-m($screen-desktop){
+      display: none;
+    }
+  }
+  &__item{
+    &:not(:last-of-type){
+      margin-right: 5px;
+    }
+    &--transparent{
+      border-bottom: 3px solid transparent;
+    }
+  }
+}
