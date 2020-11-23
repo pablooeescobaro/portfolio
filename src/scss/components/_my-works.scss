@@ -1,0 +1,50 @@
+.my-works {
+  position: relative;
+  @include flex(center, center, column, nowrap);
+  min-height: 100vh;
+  background-color: $indigo-dye;
+  padding: 50px 0 50px 0;
+  @include media-d-m($screen-tablet-small) {
+    min-height: 0;
+    height: 100%;
+    text-align: center;
+  }
+  &--up{
+  padding: 145px 0 50px 0;
+    
+  }
+  &__item {
+    @include flex(center, center, row, nowrap);
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+    }
+  }
+  &__img {
+    max-width: 500px;
+    width: 100%;
+    margin-right: 110px;
+    @include media-d-m($screen-desktop) {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+  }
+  &__content-banner {
+    width: 100%;
+    text-align: center;
+    @include flex(center, center, column, nowrap);
+  }
+  &__title {
+    @include text($h24, 700, $mint-crema, $f-rubik);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    @include media-d-m($screen-desktop) {
+      margin-bottom: 25px;
+    }
+  }
+  &__btn {
+    @include media-d-m($screen-desktop) {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}

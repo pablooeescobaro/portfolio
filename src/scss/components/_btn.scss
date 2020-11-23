@@ -1,0 +1,49 @@
+$style: button;
+
+.#{$style} {
+  @include flex(center, center, row, nowrap);
+  @include text($h20, 700, $mint-crema, $f-rubik);
+  min-width: 225px;
+  height: 60px;
+  position: relative;
+  border: 3px solid $mint-crema;
+  // background-color: $mint-crema;
+  @include media-d-m($screen-desktop){
+    min-width: 0px;
+  }
+
+  text-transform: uppercase;
+  &__text{
+      z-index: 5;
+  }
+  &--hover{ 
+      overflow: hidden;
+    &::after {
+        @include position(-170px, 0, 0, -480px );
+        // @include position(-70px, 0, 0, -30px );
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      transition-property: top, left;
+      transition-duration: 0.5s;
+      text-transform: ease;
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background-color: $oxford-blue;
+    }
+    &:hover{
+        &::after {
+        @include position(-170px, 0, 0, 10px );
+          content: "";
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background-color: $oxford-blue;
+        } 
+      }
+  }
+}

@@ -1,0 +1,12 @@
+.footer{
+    @include flex (space-between, center, column, nowrap);
+    padding: 50px 3%;
+    text-align: center;
+    &__title{
+        @include text($h20, 700, $oxford-blue, $f-rubik);
+    }
+    &__subtitle{
+        @include text($h20, 700, $oxford-blue, $f-rubik);
+        margin-bottom: 50px;
+    }
+}

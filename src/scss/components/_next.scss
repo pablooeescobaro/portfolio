@@ -8,16 +8,27 @@
     @include media-d-m($screen-tablet-small){
       display: none;
     }
+    &--block{
+      @include media-d-m($screen-tablet-small){
+        display: block;
+      }
+    }
     &__text{
         @include text($h18, 400, $indigo-dye, $f-rubik);
         &--white{
           color: $mint-crema;
+        }
+        &--blue{
+          color: $oxford-blue;
         }
     }
     &__arrow{
         @include text($h18, 400, $indigo-dye, $f-rubik);
         &--white{
           color: $mint-crema;
+        }
+        &--blue{
+          color: $oxford-blue;
         }
     }
     animation-duration: 2s;

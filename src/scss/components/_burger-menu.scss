@@ -1,6 +1,11 @@
 $style: tpl-hamburger;
 
 .tpl-hamburger {
+  position: relative;
+  top: 5px;
+  @include media-d-m($screen-tablet-small){
+    top: 0.4px;
+  }
   & svg {
 @include size(50px, 80px);
     cursor: pointer;
@@ -59,7 +64,7 @@ $style: tpl-hamburger;
 }
 .menu {
   &__box {
-    @include size(70%, 100%);
+    @include size(50%, 100%);
     @include flex(center, center, row, nowrap);
     position: fixed;
     visibility: hidden;
