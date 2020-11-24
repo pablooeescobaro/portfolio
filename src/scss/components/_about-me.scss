@@ -1,7 +1,7 @@
 .about-me {
   position: relative;
   @include flex(center, center, column, nowrap);
-  height: calc(100vh-263px);
+  height: calc(100vh-143px);
   @include media-d-m($screen-desktop) {
     height: calc(100vh-170px);
   }
