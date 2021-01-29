@@ -5,6 +5,7 @@ $style: button;
   @include text($h20, 700, $mint-crema, $f-rubik);
   min-width: 225px;
   height: 60px;
+  cursor: pointer;
   position: relative;
   border: 3px solid $mint-crema;
   // background-color: $mint-crema;
